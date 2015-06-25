@@ -5,7 +5,7 @@
   <subtitle><![CDATA[看看上面]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://blog.zhangbody.com//"/>
-  <updated>2015-06-25T09:33:08.655Z</updated>
+  <updated>2015-06-25T09:35:18.488Z</updated>
   <id>http://blog.zhangbody.com//</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://blog.zhangbody.com/2015/06/25/hexo-install/"/>
     <id>http://blog.zhangbody.com/2015/06/25/hexo-install/</id>
     <published>2015-06-25T06:33:58.000Z</published>
-    <updated>2015-06-25T09:33:08.655Z</updated>
+    <updated>2015-06-25T09:35:18.488Z</updated>
     <content type="html"><![CDATA[<h1 id="1、操作_Github">1、操作 Github</h1><p>安装好 hexo 后，怎么也要部署到网上上去吧！Github 的申请就不说明了，大家都知道。重点是和 hexo 的配合。</p>
 <h2 id="1-1_申请_repo">1.1 申请 repo</h2><p>点击 Github 站点右上方的 <code>new repository</code>，创建一个名为 <code>zhangbody.github.com</code> 的 repo（<code>仓库名必须为【your_user_name.github.io】</code>）。</p>
 <p>将 URL <code>https://github.com/zhangbody/zhangbody.github.com.git</code> 拷贝下来待用。</p>
@@ -146,9 +146,13 @@
 <h1 id="References">References</h1><p>【1】Hexo （<a href="https://github.com/hexojs/hexo）" target="_blank" rel="external">https://github.com/hexojs/hexo）</a><br>【2】Hexo All Themes（<a href="https://github.com/hexojs/hexo/wiki/Themes）" target="_blank" rel="external">https://github.com/hexojs/hexo/wiki/Themes）</a><br>【3】hexo添加404页面(<a href="http://ruocaiwu.github.io/2014/08/14/hexo%E6%B7%BB%E5%8A%A0404%E9%A1%B5%E9%9D%A2/" target="_blank" rel="external">http://ruocaiwu.github.io/2014/08/14/hexo%E6%B7%BB%E5%8A%A0404%E9%A1%B5%E9%9D%A2/</a>)<br>【4】如何向google提交sitemap（详细）(<a href="http://fionat.github.io/blog/2013/10/23/sitemap/" target="_blank" rel="external">http://fionat.github.io/blog/2013/10/23/sitemap/</a>)</p>
 ]]></content>
     <summary type="html">
-    <![CDATA[<h1 id="1、操作_Github">1、操作 Github</h1><p>安装好 hexo 后，怎么也要部署到网上上去吧！Github 的申请就不说明了，大家都知道。重点是和 hexo 的配合。</p>
-<h2 id="1-1_申请_repo">1.1 申请 repo</h]]>
+    <![CDATA[test]]>
+    
     </summary>
+    
+      <category term="test" scheme="http://blog.zhangbody.com/tags/test/"/>
+    
+      <category term="test" scheme="http://blog.zhangbody.com/categories/test/"/>
     
   </entry>
   
