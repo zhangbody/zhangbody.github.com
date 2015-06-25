@@ -204,56 +204,188 @@
 </nav>
       <div class="body-wrap">
   
+    <article id="post-hexo-install" class="article article-type-post" itemscope itemprop="blogPost">
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2015" class="archive-year">2015</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2015/06/25/hexo-install/" class="archive-article-date">
-  	<time datetime="2015-06-25T06:33:58.000Z" itemprop="datePublished">6月 25</time>
+    <div class="article-meta">
+      <a href="/2015/06/25/hexo-install/" class="article-date">
+  	<time datetime="2015-06-25T06:33:58.000Z" itemprop="datePublished">2015-06-25</time>
 </a>
-        </div>
-    	 
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
   
     <h1 itemprop="name">
-      <a class="archive-article-title" href="/2015/06/25/hexo-install/">hexo 安装小计</a>
+      <a class="article-title" href="/2015/06/25/hexo-install/">hexo 安装小计</a>
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="1、操作_Github">1、操作 Github</h1><p>安装好 hexo 后，怎么也要部署到网上上去吧！Github 的申请就不说明了，大家都知道。重点是和 hexo 的配合。</p>
+<h2 id="1-1_申请_repo">1.1 申请 repo</h2><p>点击 Github 站点右上方的 <code>new repository</code>，创建一个名为 <code>zhangbody.github.com</code> 的 repo（<code>仓库名必须为【your_user_name.github.io】</code>）。</p>
+<p>将 URL <code>https://github.com/zhangbody/zhangbody.github.com.git</code> 拷贝下来待用。</p>
+<h1 id="2、安装_hexo">2、安装 hexo</h1><h2 id="2-1_安装_node-js">2.1 安装 node.js</h2><p>安装 <a href="https://nodejs.org/download/" target="_blank" rel="external">Node.js</a> 或 <a href="https://iojs.org/en/index.html" target="_blank" rel="external">io.js</a> 都可以。</p>
+<h2 id="2-2_安装_hexo">2.2 安装 hexo</h2><p>利用 npm 命令</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo</span><br></pre></td></tr></table></figure>
+<p>安装完成后，自己找一个文件夹（如 <code>H:\hexo</code>）准备初始化 hexo。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo init</span><br><span class="line">npm install</span><br></pre></td></tr></table></figure>
+<h2 id="2-3_检查安装情况">2.3 检查安装情况</h2><p>运行以下命令，然后在浏览器输入 <code>localhost:4000</code> 查看博客的情况。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo generate</span><br><span class="line">hexo server</span><br></pre></td></tr></table></figure></p>
+<h2 id="2-4_配置_hexo">2.4 配置 hexo</h2><h3 id="2-4-1__config-yml">2.4.1 _config.yml</h3><p>编辑 <code>_config.yml</code> (在 <code>H:\hexo</code> 下)。下面是需要自己修改的部分。</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"># Site</span><br><span class="line">title: 张荣自己玩的地方</span><br><span class="line">subtitle: 看看上面</span><br><span class="line">description: 描述</span><br><span class="line">author: 张荣</span><br><span class="line">email: zhangbody@gmail.com</span><br><span class="line">language: zh-CN</span><br><span class="line">timezone: Asia/Shanghai</span><br><span class="line"></span><br><span class="line"># URL</span><br><span class="line">url: http://blog.zhangbody.com/</span><br><span class="line">root: /</span><br><span class="line"></span><br><span class="line"># Deployment</span><br><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  # Gitbub 的 URL 用在这里了</span><br><span class="line">  repository: https://github.com/zhangbody/zhangbody.github.com.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
+<h3 id="2-4-2_CNAME">2.4.2 CNAME</h3><p>这个和博客的域名解析有关，需要在 <code>H:\hexo\source</code> 下创建一个名为 <code>CNAME</code> 的文件，文件内容是自己使用的域名。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">blog.zhangbody.com</span><br></pre></td></tr></table></figure>
+<h3 id="2-4-3_404-html">2.4.3 404.html</h3><p>再单独创建一个 404 页面，也放在 <code>H:\hexo\source</code> 下面，这个就不细说了。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">layout: <span class="keyword">default</span></span><br><span class="line">---</span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="title">html</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">head</span>&gt;</span></span><br><span class="line">         <span class="tag">&lt;<span class="title">meta</span> <span class="attribute">charset</span>=<span class="value">"UTF-8"</span> /&gt;</span></span><br><span class="line">         <span class="tag">&lt;<span class="title">title</span>&gt;</span>404<span class="tag">&lt;/<span class="title">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="title">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">body</span>&gt;</span></span><br><span class="line">         <span class="tag">&lt;<span class="title">script</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span> <span class="attribute">src</span>=<span class="value">"http://www.qq.com/404/search_children.js"</span> <span class="attribute">charset</span>=<span class="value">"utf-8"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="title">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">html</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
+<h2 id="2-5_部署_hexo">2.5 部署 hexo</h2><p>执行下列指令即可完成部署，部署过程中需要输入 Github 的用户名和密码。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo generate</span><br><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
+<h1 id="3、写文章">3、写文章</h1><p>使用如下命令创建新文章。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo n [文章名称]</span><br></pre></td></tr></table></figure>
+<p>hexo 会在 <code>H:\hexo\source\_posts\</code> 目录下创建 <code>[文章名称].md</code> 文件。</p>
+<h1 id="3、命令">3、命令</h1><h1 id="3-1_常用命令">3.1 常用命令</h1><table>
+<thead>
+<tr>
+<th>命令</th>
+<th style="text-align:right"></th>
+<th style="text-align:center">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>hexo g</td>
+<td style="text-align:right">hexo generate</td>
+<td style="text-align:center">生成静态页面至public目录</td>
+</tr>
+<tr>
+<td>hexo d</td>
+<td style="text-align:right">hexo deploy</td>
+<td style="text-align:center">将.deploy目录部署到GitHub</td>
+</tr>
+<tr>
+<td>hexo s</td>
+<td style="text-align:right">hexo server</td>
+<td style="text-align:center">开启预览访问端口（默认端口4000，’ctrl + c’关闭server）</td>
+</tr>
+<tr>
+<td>hexo n “postName”</td>
+<td style="text-align:right">hexo new “postName”</td>
+<td style="text-align:center">新建文章</td>
+</tr>
+<tr>
+<td>hexo n page “pageName”</td>
+<td style="text-align:right">hexo new page “pageName”</td>
+<td style="text-align:center">新建页面</td>
+</tr>
+<tr>
+<td>hexo clean</td>
+<td style="text-align:right"></td>
+<td style="text-align:center">121</td>
+</tr>
+<tr>
+<td>hexo help</td>
+<td style="text-align:right"></td>
+<td style="text-align:center">查看帮助</td>
+</tr>
+<tr>
+<td>hexo version</td>
+<td style="text-align:right"></td>
+<td style="text-align:center">查看Hexo的版本</td>
+</tr>
+</tbody>
+</table>
+<h1 id="3-2_复合命令">3.2 复合命令</h1><table>
+<thead>
+<tr>
+<th>命令</th>
+<th style="text-align:center">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>hexo deploy -g</td>
+<td style="text-align:center">生成加部署</td>
+</tr>
+<tr>
+<td>hexo server -g</td>
+<td style="text-align:center">生成加预览</td>
+</tr>
+</tbody>
+</table>
+<h1 id="4、Theme_皮肤">4、Theme 皮肤</h1><h2 id="4-1_安装">4.1 安装</h2><p>安装方式如下</p>
+<blockquote>
+<p>$ cd <code>H:\hexo\</code><br>$ git clone <a href="https://github.com/litten/hexo-theme-yilia.git" target="_blank" rel="external">https://github.com/litten/hexo-theme-yilia.git</a> themes/yilia</p>
+</blockquote>
+<p>然后修改<code>hexo</code>根目录下的<code>_config.yml</code>中的<code>theme</code>字段，改为<code>yilia</code></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">theme: yilia</span><br></pre></td></tr></table></figure>
+<h2 id="4-2_更新">4.2 更新</h2><blockquote>
+<p>$ cd <code>H:\hexo\themes\yilia\</code><br>$ git pull</p>
+</blockquote>
+<h2 id="4-3_配置">4.3 配置</h2><p>这里以 yilia Theme 的配置为例，打开<code>H:\hexo\themes\yilia\_config.yml</code> 文件。<br>duoshuo 后面改为自己的多说 <code>short_name</code></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">#是否开启多说评论，填写你在多说申请的项目名称 duoshuo: duoshuo-key</span><br><span class="line">#若使用disqus，请在博客config文件中填写disqus_shortname，并关闭多说评论</span><br><span class="line">duoshuo: zhangbody</span><br></pre></td></tr></table></figure>
+<h1 id="5、插件">5、插件</h1><p>插件的安装和配置啥的还是看主页去吧！</p>
+<ul>
+<li><a href="https://github.com/hexojs/hexo-generator-feed" target="_blank" rel="external">hexo-generator-feed</a></li>
+<li><a href="https://github.com/hexojs/hexo-migrator-rss" target="_blank" rel="external">hexo-migrator-rss</a></li>
+<li><a href="https://github.com/hexojs/hexo-generator-sitemap" target="_blank" rel="external">hexo-generator-sitemap</a></li>
+</ul>
+<p>但是一些页面显示问题还是需要说的！</p>
+<p>修改 <code>themes/yilia</code> 下的 <code>_config.yml</code> 文件，在 menu 节点下添加下面的内容。</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">menu:</span><br><span class="line">  主页: /</span><br><span class="line">  所有文章: /archives</span><br><span class="line">  Rss: /atom.xml</span><br><span class="line">  Sitemap: /sitemap.xml</span><br></pre></td></tr></table></figure>
+<p>向 google 提交 sitemap，请参考【4】。</p>
+<h2 id="5-1_安装">5.1 安装</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br><span class="line">npm install hexo-generator-archive --save</span><br><span class="line">npm install hexo-generator-baidu-sitemap@<span class="number">0.1</span>.1 --save</span><br><span class="line">npm install hexo-generator-category --save</span><br><span class="line">npm install hexo-generator-feed --save</span><br><span class="line">npm install hexo-generator-index --save</span><br><span class="line">npm install hexo-generator-sitemap --save</span><br><span class="line">npm install hexo-generator-tag --save</span><br><span class="line">npm install hexo-renderer-ejs --save</span><br><span class="line">npm install hexo-renderer-marked --save</span><br><span class="line">npm install hexo-renderer-stylus --save</span><br><span class="line">npm install hexo-server --save</span><br></pre></td></tr></table></figure>
+<h2 id="5-1_启用插件">5.1 启用插件</h2><p>修改 <code>H:\Hexo\_config.yml</code> 文件，增加如下内容。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"># Extensions</span><br><span class="line">Plugins:</span><br><span class="line">- hexo-generator-feed</span><br><span class="line">- hexo-generator-sitemap</span><br><span class="line"></span><br><span class="line">#Feed Atom</span><br><span class="line">feed:</span><br><span class="line">  type: atom</span><br><span class="line">  path: atom.xml</span><br><span class="line">  limit: <span class="number">20</span></span><br></pre></td></tr></table></figure>
+<h2 id="5-2_升级插件">5.2 升级插件</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm update</span><br></pre></td></tr></table></figure>
+<h2 id="5-3_卸载插件">5.3 卸载插件</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm uninstall hexo-generator-sitemap</span><br></pre></td></tr></table></figure>
+<h2 id="5-4_大配置，以后完善">5.4 大配置，以后完善</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">index_generator:</span><br><span class="line">  per_page: <span class="number">10</span> ##首页默认<span class="number">10</span>篇文章标题 如果值为<span class="number">0</span>不分页</span><br><span class="line">archive_generator:</span><br><span class="line">  per_page: <span class="number">10</span> ##归档页面默认<span class="number">10</span>篇文章标题</span><br><span class="line">  yearly: <span class="literal">true</span>  ##生成年视图</span><br><span class="line">  monthly: <span class="literal">true</span> ##生成月视图</span><br><span class="line">tag_generator:</span><br><span class="line">  per_page: <span class="number">10</span> ##标签分类页面默认<span class="number">10</span>篇文章</span><br><span class="line">category_generator: </span><br><span class="line">  per_page: <span class="number">10</span> ###分类页面默认<span class="number">10</span>篇文章</span><br><span class="line">feed:</span><br><span class="line">  type: atom ##feed类型 atom或者rss2</span><br><span class="line">  path: atom.xml ##feed路径</span><br><span class="line">  limit: <span class="number">20</span>  ##feed文章最小数量</span><br><span class="line">deploy:</span><br><span class="line">  type: git ##部署类型 其他类型自行google之</span><br><span class="line">  repo: <span class="xml"><span class="tag">&lt;<span class="title">repository</span> <span class="attribute">url</span>&gt;</span> ##git仓库地址</span><br><span class="line">  branch: [branch] ##git 页面分支</span><br><span class="line">  message: [message] ##git message建议默认字段update 可以自定义</span><br><span class="line">  -多部署</span><br><span class="line">      deploy:</span><br><span class="line">          type: git</span><br><span class="line">          message: update  ##git message建议默认字段update 可以自定义</span><br><span class="line">          repo: </span><br><span class="line">          github: <span class="tag">&lt;<span class="title">repository</span> <span class="attribute">url</span>&gt;</span>,[branch] ##github 仓库地址和分支</span><br><span class="line">          gitcafe: <span class="tag">&lt;<span class="title">repository</span> <span class="attribute">url</span>&gt;</span>,[branch] ##gitcafe 仓库地址和分支</span></span><br></pre></td></tr></table></figure>
+<h1 id="6、其它">6、其它</h1><ul>
+<li>每次修改本地文件后，都需要在 <code>H:\hexo</code> 目录下执行 <code>hexo g</code> 命令。</li>
+<li>文章乱码什么的，需要将 <code>.md</code> 文件转换成 <code>UTF-8</code> 编码格式，切记不要带 <code>BOM</code>。</li>
+<li>在浏览器访问 zhangbody.github.io 就能看到你的成就了！</li>
+<li>yaml 配置文件，每个配置项的冒号: 后面必须跟一个空格。</li>
+</ul>
+<h1 id="References">References</h1><p>【1】Hexo （<a href="https://github.com/hexojs/hexo）" target="_blank" rel="external">https://github.com/hexojs/hexo）</a><br>【2】Hexo All Themes（<a href="https://github.com/hexojs/hexo/wiki/Themes）" target="_blank" rel="external">https://github.com/hexojs/hexo/wiki/Themes）</a><br>【3】hexo添加404页面(<a href="http://ruocaiwu.github.io/2014/08/14/hexo%E6%B7%BB%E5%8A%A0404%E9%A1%B5%E9%9D%A2/" target="_blank" rel="external">http://ruocaiwu.github.io/2014/08/14/hexo%E6%B7%BB%E5%8A%A0404%E9%A1%B5%E9%9D%A2/</a>)<br>【4】如何向google提交sitemap（详细）(<a href="http://fionat.github.io/blog/2013/10/23/sitemap/" target="_blank" rel="external">http://fionat.github.io/blog/2013/10/23/sitemap/</a>)</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li></ul>
 	</div>
 
-          
+      
 	<div class="article-category tagcloud">
 	<a class="article-category-link" href="/categories/技术/">技术</a>
 	</div>
 
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
+      
+      <div class="clearfix"></div>
+    </div>
     
+  </div>
+  
+</article>
 
+
+
+
+
+
+
+  
+  
 </div>
       <footer id="footer">
   <div class="outer">
