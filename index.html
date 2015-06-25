@@ -101,11 +101,11 @@
 							
 								<a class="github" target="_blank" href="/#" title="github">github</a>
 					        
-								<a class="weibo" target="_blank" href="/#" title="weibo">weibo</a>
+								<a class="weibo" target="_blank" href="http://weibo.com/zhangbody" title="weibo">weibo</a>
 					        
-								<a class="rss" target="_blank" href="/#" title="rss">rss</a>
+								<a class="rss" target="_blank" href="/atom.xml" title="rss">rss</a>
 					        
-								<a class="zhihu" target="_blank" href="/#" title="zhihu">zhihu</a>
+								<a class="zhihu" target="_blank" href="http://www.zhihu.com/people/zhang-rong-9" title="zhihu">zhihu</a>
 					        
 						</div>
 					</nav>
@@ -183,11 +183,11 @@
 					
 						<a class="github" target="_blank" href="/#" title="github">github</a>
 			        
-						<a class="weibo" target="_blank" href="/#" title="weibo">weibo</a>
+						<a class="weibo" target="_blank" href="http://weibo.com/zhangbody" title="weibo">weibo</a>
 			        
-						<a class="rss" target="_blank" href="/#" title="rss">rss</a>
+						<a class="rss" target="_blank" href="/atom.xml" title="rss">rss</a>
 			        
-						<a class="zhihu" target="_blank" href="/#" title="zhihu">zhihu</a>
+						<a class="zhihu" target="_blank" href="http://www.zhihu.com/people/zhang-rong-9" title="zhihu">zhihu</a>
 			        
 				</div>
 			</nav>
@@ -236,6 +236,7 @@
 <h3 id="2-4-2_CNAME">2.4.2 CNAME</h3><p>这个和博客的域名解析有关，需要在 <code>H:\hexo\source</code> 下创建一个名为 <code>CNAME</code> 的文件，文件内容是自己使用的域名。</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">blog.zhangbody.com</span><br></pre></td></tr></table></figure>
 <h3 id="2-4-3_404-html">2.4.3 404.html</h3><p>再单独创建一个 404 页面，也放在 <code>H:\hexo\source</code> 下面，这个就不细说了。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">layout: <span class="keyword">default</span></span><br><span class="line">---</span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="title">html</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">head</span>&gt;</span></span><br><span class="line">         <span class="tag">&lt;<span class="title">meta</span> <span class="attribute">charset</span>=<span class="value">"UTF-8"</span> /&gt;</span></span><br><span class="line">         <span class="tag">&lt;<span class="title">title</span>&gt;</span>404<span class="tag">&lt;/<span class="title">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="title">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">body</span>&gt;</span></span><br><span class="line">         <span class="tag">&lt;<span class="title">script</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span> <span class="attribute">src</span>=<span class="value">"http://www.qq.com/404/search_children.js"</span> <span class="attribute">charset</span>=<span class="value">"utf-8"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="title">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">html</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
 <h2 id="2-5_部署_hexo">2.5 部署 hexo</h2><p>执行下列指令即可完成部署，部署过程中需要输入 Github 的用户名和密码。</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo generate</span><br><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
 <h1 id="3、写文章">3、写文章</h1><p>使用如下命令创建新文章。</p>
@@ -321,13 +322,28 @@
 </blockquote>
 <h2 id="4-3_配置">4.3 配置</h2><p>这里以 yilia Theme 的配置为例，打开<code>H:\hexo\themes\yilia\_config.yml</code> 文件。<br>duoshuo 后面改为自己的多说 <code>short_name</code></p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">#是否开启多说评论，填写你在多说申请的项目名称 duoshuo: duoshuo-key</span><br><span class="line">#若使用disqus，请在博客config文件中填写disqus_shortname，并关闭多说评论</span><br><span class="line">duoshuo: zhangbody</span><br></pre></td></tr></table></figure>
-<h1 id="5、其它要点">5、其它要点</h1><ul>
+<h1 id="5、插件">5、插件</h1><p>插件的安装和配置啥的还是看主页去吧！</p>
+<ul>
+<li><a href="https://github.com/hexojs/hexo-generator-feed" target="_blank" rel="external">hexo-generator-feed</a></li>
+<li><a href="https://github.com/hexojs/hexo-migrator-rss" target="_blank" rel="external">hexo-migrator-rss</a></li>
+<li><a href="https://github.com/hexojs/hexo-generator-sitemap" target="_blank" rel="external">hexo-generator-sitemap</a></li>
+</ul>
+<p>但是一些页面显示问题还是需要说的！</p>
+<p>修改 <code>themes/yilia</code> 下的 <code>_config.yml</code> 文件，在 menu 节点下添加下面的内容。</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">menu:</span><br><span class="line">  主页: /</span><br><span class="line">  所有文章: /archives</span><br><span class="line">  Rss: /atom.xml</span><br><span class="line">  Sitemap: /sitemap.xml</span><br></pre></td></tr></table></figure>
+<p>向 google 提交 sitemap，请参考【4】。</p>
+<h2 id="5-1_启用插件">5.1 启用插件</h2><p>修改 <code>H:\Hexo\_config.yml</code> 文件，增加如下内容。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"># Extensions</span><br><span class="line">Plugins:</span><br><span class="line">- hexo-generator-feed</span><br><span class="line">- hexo-generator-sitemap</span><br><span class="line"></span><br><span class="line">#Feed Atom</span><br><span class="line">feed:</span><br><span class="line">  type: atom</span><br><span class="line">  path: atom.xml</span><br><span class="line">  limit: <span class="number">20</span></span><br></pre></td></tr></table></figure>
+<h2 id="5-2_升级插件">5.2 升级插件</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm update</span><br></pre></td></tr></table></figure>
+<h2 id="5-3_卸载插件">5.3 卸载插件</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm uninstall hexo-generator-sitemap</span><br></pre></td></tr></table></figure>
+<h1 id="6、其它">6、其它</h1><ul>
 <li>每次修改本地文件后，都需要在 <code>H:\hexo</code> 目录下执行 <code>hexo g</code> 命令。</li>
 <li>文章乱码什么的，需要将 <code>.md</code> 文件转换成 <code>UTF-8</code> 编码格式，切记不要带 <code>BOM</code>。</li>
 <li>在浏览器访问 zhangbody.github.io 就能看到你的成就了！</li>
 <li>yaml 配置文件，每个配置项的冒号: 后面必须跟一个空格。</li>
 </ul>
-<h1 id="6_Tips">6 Tips</h1>
+<h1 id="References">References</h1><p>【1】Hexo （<a href="https://github.com/hexojs/hexo）" target="_blank" rel="external">https://github.com/hexojs/hexo）</a><br>【2】Hexo All Themes（<a href="https://github.com/hexojs/hexo/wiki/Themes）" target="_blank" rel="external">https://github.com/hexojs/hexo/wiki/Themes）</a><br>【3】hexo添加404页面(<a href="http://ruocaiwu.github.io/2014/08/14/hexo%E6%B7%BB%E5%8A%A0404%E9%A1%B5%E9%9D%A2/" target="_blank" rel="external">http://ruocaiwu.github.io/2014/08/14/hexo%E6%B7%BB%E5%8A%A0404%E9%A1%B5%E9%9D%A2/</a>)<br>【4】如何向google提交sitemap（详细）(<a href="http://fionat.github.io/blog/2013/10/23/sitemap/" target="_blank" rel="external">http://fionat.github.io/blog/2013/10/23/sitemap/</a>)</p>
+
       
     </div>
     
