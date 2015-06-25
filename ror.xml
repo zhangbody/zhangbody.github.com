@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:ror="http://rorweb.com/0.1/" >
+<channel>
+  <title>ROR Sitemap for http://blog.zhangbody.com/</title>
+  <link>http://blog.zhangbody.com/</link>
+
+<item>
+     <link>http://blog.zhangbody.com/</link>
+     <title>张荣自己玩的地方</title>
+     <description>描述</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>0</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>http://blog.zhangbody.com/archives/</link>
+     <title>Archives | 张荣自己玩的地方</title>
+     <description>描述</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>http://blog.zhangbody.com/2015/06/25/hexo-install/</link>
+     <title>hexo 安装小计 | 张荣自己玩的地方</title>
+     <description>1、操作 Github安装好 hexo 后，怎么也要部署到网上上去吧！Github 的申请就不说明了，大家都知道。重点是和 hexo 的配合。
+1.1 申请 repo点击 Github 站点右上方的 new repository，创建一个名为 zhangbody.github.com 的 repo。
+将 URL https://github.com/zhangbody/zhangbody.gith</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>http://blog.zhangbody.com/2015/06/25/ceshi/</link>
+     <title>ceshi | 张荣自己玩的地方</title>
+     <description>描述</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>http://blog.zhangbody.com/2015/06/25/test/</link>
+     <title>test | 张荣自己玩的地方</title>
+     <description>测试</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>http://blog.zhangbody.com/2015/06/25/hello-world/</link>
+     <title>Hello World | 张荣自己玩的地方</title>
+     <description>Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
+Quick</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>http://blog.zhangbody.com/archives/2015/</link>
+     <title>Archives: 2015 | 张荣自己玩的地方</title>
+     <description>描述</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>2</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+</channel>
+</rss>
+  

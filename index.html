@@ -223,7 +223,7 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h1 id="1、操作_Github">1、操作 Github</h1><p>安装好 hexo 后，怎么也要部署到网上上去吧！Github 的申请就不说明了，大家都知道。重点是和 hexo 的配合。</p>
-<h2 id="1-1_申请_repo">1.1 申请 repo</h2><p>点击 Github 站点右上方的 <code>new repository</code>，创建一个名为 <code>zhangbody.github.com</code> 的 repo。</p>
+<h2 id="1-1_申请_repo">1.1 申请 repo</h2><p>点击 Github 站点右上方的 <code>new repository</code>，创建一个名为 <code>zhangbody.github.com</code> 的 repo（<code>仓库名必须为【your_user_name.github.io】</code>）。</p>
 <p>将 URL <code>https://github.com/zhangbody/zhangbody.github.com.git</code> 拷贝下来待用。</p>
 <h1 id="2、安装_hexo">2、安装 hexo</h1><h2 id="2-1_安装_node-js">2.1 安装 node.js</h2><p>安装 <a href="https://nodejs.org/download/" target="_blank" rel="external">Node.js</a> 或 <a href="https://iojs.org/en/index.html" target="_blank" rel="external">io.js</a> 都可以。</p>
 <h2 id="2-2_安装_hexo">2.2 安装 hexo</h2><p>利用 npm 命令</p>
@@ -236,12 +236,98 @@
 <h3 id="2-4-2_CNAME">2.4.2 CNAME</h3><p>这个和博客的域名解析有关，需要在 <code>H:\hexo\source</code> 下创建一个名为 <code>CNAME</code> 的文件，文件内容是自己使用的域名。</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">blog.zhangbody.com</span><br></pre></td></tr></table></figure>
 <h3 id="2-4-3_404-html">2.4.3 404.html</h3><p>再单独创建一个 404 页面，也放在 <code>H:\hexo\source</code> 下面，这个就不细说了。</p>
-<h2 id="2-5_部署_hexo">2.5 部署 hexo</h2><p>执行下列指令即可完成部署。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo generate</span><br><span class="line">hexo deploy</span><br></pre></td></tr></table></figure></p>
-<h1 id="3、其它要点">3、其它要点</h1><ul>
-<li>每次修改本地文件后，需要 hexo generate 才能保存。每次使用命令时，都要在 <code>H:\hexo</code> 目录下。</li>
+<h2 id="2-5_部署_hexo">2.5 部署 hexo</h2><p>执行下列指令即可完成部署，部署过程中需要输入 Github 的用户名和密码。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo generate</span><br><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
+<h1 id="3、写文章">3、写文章</h1><p>使用如下命令创建新文章。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo n [文章名称]</span><br></pre></td></tr></table></figure>
+<p>hexo 会在 <code>H:\hexo\source\_posts\</code> 目录下创建 <code>[文章名称].md</code> 文件。</p>
+<h1 id="3、命令">3、命令</h1><h1 id="3-1_常用命令">3.1 常用命令</h1><table>
+<thead>
+<tr>
+<th>命令</th>
+<th style="text-align:right"></th>
+<th style="text-align:center">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>hexo g</td>
+<td style="text-align:right">hexo generate</td>
+<td style="text-align:center">生成静态页面至public目录</td>
+</tr>
+<tr>
+<td>hexo d</td>
+<td style="text-align:right">hexo deploy</td>
+<td style="text-align:center">将.deploy目录部署到GitHub</td>
+</tr>
+<tr>
+<td>hexo s</td>
+<td style="text-align:right">hexo server</td>
+<td style="text-align:center">开启预览访问端口（默认端口4000，’ctrl + c’关闭server）</td>
+</tr>
+<tr>
+<td>hexo n “postName”</td>
+<td style="text-align:right">hexo new “postName”</td>
+<td style="text-align:center">新建文章</td>
+</tr>
+<tr>
+<td>hexo n page “pageName”</td>
+<td style="text-align:right">hexo new page “pageName”</td>
+<td style="text-align:center">新建页面</td>
+</tr>
+<tr>
+<td>hexo clean</td>
+<td style="text-align:right"></td>
+<td style="text-align:center">121</td>
+</tr>
+<tr>
+<td>hexo help</td>
+<td style="text-align:right"></td>
+<td style="text-align:center">查看帮助</td>
+</tr>
+<tr>
+<td>hexo version</td>
+<td style="text-align:right"></td>
+<td style="text-align:center">查看Hexo的版本</td>
+</tr>
+</tbody>
+</table>
+<h1 id="3-2_复合命令">3.2 复合命令</h1><table>
+<thead>
+<tr>
+<th>命令</th>
+<th style="text-align:center">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>hexo deploy -g</td>
+<td style="text-align:center">生成加部署</td>
+</tr>
+<tr>
+<td>hexo server -g</td>
+<td style="text-align:center">生成加预览</td>
+</tr>
+</tbody>
+</table>
+<h1 id="4、Theme_皮肤">4、Theme 皮肤</h1><h2 id="4-1_安装">4.1 安装</h2><p>安装方式如下</p>
+<blockquote>
+<p>$ cd <code>H:\hexo\</code><br>$ git clone <a href="https://github.com/litten/hexo-theme-yilia.git" target="_blank" rel="external">https://github.com/litten/hexo-theme-yilia.git</a> themes/yilia</p>
+</blockquote>
+<p>然后修改<code>hexo</code>根目录下的<code>_config.yml</code>中的<code>theme</code>字段，改为<code>yilia</code></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">theme: yilia</span><br></pre></td></tr></table></figure>
+<h2 id="4-2_更新">4.2 更新</h2><blockquote>
+<p>$ cd <code>H:\hexo\themes\yilia\</code><br>$ git pull</p>
+</blockquote>
+<h2 id="4-3_配置">4.3 配置</h2><p>这里以 yilia Theme 的配置为例，打开<code>H:\hexo\themes\yilia\_config.yml</code> 文件。<br>duoshuo 后面改为自己的多说 <code>short_name</code></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">#是否开启多说评论，填写你在多说申请的项目名称 duoshuo: duoshuo-key</span><br><span class="line">#若使用disqus，请在博客config文件中填写disqus_shortname，并关闭多说评论</span><br><span class="line">duoshuo: zhangbody</span><br></pre></td></tr></table></figure>
+<h1 id="5、其它要点">5、其它要点</h1><ul>
+<li>每次修改本地文件后，都需要在 <code>H:\hexo</code> 目录下执行 <code>hexo g</code> 命令。</li>
+<li>文章乱码什么的，需要将 <code>.md</code> 文件转换成 <code>UTF-8</code> 编码格式，切记不要带 <code>BOM</code>。</li>
 <li>在浏览器访问 zhangbody.github.io 就能看到你的成就了！</li>
+<li>yaml 配置文件，每个配置项的冒号: 后面必须跟一个空格。</li>
 </ul>
-
+<h1 id="6_Tips">6 Tips</h1>
       
     </div>
     
