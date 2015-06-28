@@ -69,10 +69,10 @@
   
   <entry>
     <title><![CDATA[Hexo 安装小计]]></title>
-    <link href="http://blog.zhangbody.com/2015/06/25/hexo-install/"/>
-    <id>http://blog.zhangbody.com/2015/06/25/hexo-install/</id>
+    <link href="http://blog.zhangbody.com/2015/06/25/150625-hexo-install/"/>
+    <id>http://blog.zhangbody.com/2015/06/25/150625-hexo-install/</id>
     <published>2015-06-25T06:33:58.000Z</published>
-    <updated>2015-06-28T10:17:03.581Z</updated>
+    <updated>2015-06-28T11:00:10.094Z</updated>
     <content type="html"><![CDATA[<h1 id="1、操作_Github">1、操作 Github</h1><p>安装好 hexo 后，怎么也要部署到网上上去吧！Github 的申请就不说明了，大家都知道。重点是和 hexo 的配合。</p>
 <h2 id="1-1_申请_repo">1.1 申请 repo</h2><p>点击 Github 站点右上方的 <code>new repository</code>，创建一个名为 <code>zhangbody.github.com</code> 的 repo（<code>仓库名必须为【your_user_name.github.io】</code>）。</p>
 <p>将 URL <code>https://github.com/zhangbody/zhangbody.github.com.git</code> 拷贝下来待用。</p>
