@@ -5,7 +5,7 @@
   <subtitle><![CDATA[不只一亩三分]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://blog.zhangbody.com//"/>
-  <updated>2015-06-27T14:29:32.903Z</updated>
+  <updated>2015-06-28T10:56:51.046Z</updated>
   <id>http://blog.zhangbody.com//</id>
   
   <author>
@@ -16,11 +16,63 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title><![CDATA[DT Grid，RequireJS 混用的坑]]></title>
+    <link href="http://blog.zhangbody.com/2015/06/28/150628-DtGrid-RequireJS/"/>
+    <id>http://blog.zhangbody.com/2015/06/28/150628-DtGrid-RequireJS/</id>
+    <published>2015-06-28T10:14:39.000Z</published>
+    <updated>2015-06-28T10:56:51.046Z</updated>
+    <content type="html"><![CDATA[<p>寥寥几句说完算了。</p>
+<p>项目前端所用技术简介：</p>
+<ul>
+<li>项目是 Web SPA 应用，使用 RequireJS 管理插件，MVVM 框架是 avalon</li>
+<li>index.html 引入了 jquery、bootstrap、dtGrid 等三个 js 文件</li>
+<li>RequireJS 中也配置了 jquery 插件</li>
+</ul>
+<p>出现的症状：</p>
+<ul>
+<li>子模块初始化 dtGrid 时，dtGrid 的 init 方法会出现错误</li>
+<li>用 RequireJS 引入 dtGrid 作为插件后，dtGrid 的 init 方法依然出现错误，但问题变了</li>
+</ul>
+<p>估计问题原因如下：</p>
+<ul>
+<li>jquery 和 dtGrid 在 index.html 中引入了</li>
+<li>dtGrid 是 jquery 插件，使用了 fn 作用域</li>
+<li>jquery 在 RequireJS 中也进行了配置</li>
+<li>dtGrid 初始化时引用了 RequireJS 模块中 jquery 插件的作用域</li>
+</ul>
+<p>解决的办法：</p>
+<ul>
+<li>去掉 RequireJS 中所有的 jquery 引用</li>
+</ul>
+<p>为何如此解决？</p>
+<ul>
+<li>dtGrid 还要引用 bootstrap 等插件，依赖关系后面会越来越复杂</li>
+<li>所有和显示有关的 js/css 都在 index.html 中引入，如果显示控件有问题，只能说明选错了控件库</li>
+<li>所有和业务有关的 js 都用 RequireJS 管理</li>
+<li>做一个折中</li>
+</ul>
+]]></content>
+    <summary type="html">
+    <![CDATA[DT Grid RequireJS 混用的坑]]>
+    
+    </summary>
+    
+      <category term="DT Grid" scheme="http://blog.zhangbody.com/tags/DT-Grid/"/>
+    
+      <category term="RequireJS" scheme="http://blog.zhangbody.com/tags/RequireJS/"/>
+    
+      <category term="Web" scheme="http://blog.zhangbody.com/tags/Web/"/>
+    
+      <category term="Web" scheme="http://blog.zhangbody.com/categories/Web/"/>
+    
+  </entry>
+  
+  <entry>
     <title><![CDATA[Hexo 安装小计]]></title>
     <link href="http://blog.zhangbody.com/2015/06/25/hexo-install/"/>
     <id>http://blog.zhangbody.com/2015/06/25/hexo-install/</id>
     <published>2015-06-25T06:33:58.000Z</published>
-    <updated>2015-06-27T14:29:32.903Z</updated>
+    <updated>2015-06-28T10:17:03.581Z</updated>
     <content type="html"><![CDATA[<h1 id="1、操作_Github">1、操作 Github</h1><p>安装好 hexo 后，怎么也要部署到网上上去吧！Github 的申请就不说明了，大家都知道。重点是和 hexo 的配合。</p>
 <h2 id="1-1_申请_repo">1.1 申请 repo</h2><p>点击 Github 站点右上方的 <code>new repository</code>，创建一个名为 <code>zhangbody.github.com</code> 的 repo（<code>仓库名必须为【your_user_name.github.io】</code>）。</p>
 <p>将 URL <code>https://github.com/zhangbody/zhangbody.github.com.git</code> 拷贝下来待用。</p>
@@ -151,11 +203,11 @@
     
     </summary>
     
-      <category term="Blog" scheme="http://blog.zhangbody.com/tags/Blog/"/>
-    
       <category term="Hexo" scheme="http://blog.zhangbody.com/tags/Hexo/"/>
     
-      <category term="Blog" scheme="http://blog.zhangbody.com/categories/Blog/"/>
+      <category term="Web" scheme="http://blog.zhangbody.com/tags/Web/"/>
+    
+      <category term="Web" scheme="http://blog.zhangbody.com/categories/Web/"/>
     
   </entry>
   

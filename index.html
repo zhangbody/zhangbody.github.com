@@ -120,7 +120,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/Blog/" style="font-size: 10px;">Blog</a> <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a>
+						<a href="/tags/DT-Grid/" style="font-size: 10px;">DT Grid</a> <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/RequireJS/" style="font-size: 10px;">RequireJS</a> <a href="/tags/Web/" style="font-size: 20px;">Web</a>
 					</div>
 				</section>
 				
@@ -197,6 +197,94 @@
 	</div>
 </nav>
       <div class="body-wrap">
+  
+    <article id="post-150628-DtGrid-RequireJS" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/06/28/150628-DtGrid-RequireJS/" class="article-date">
+  	<time datetime="2015-06-28T10:14:39.000Z" itemprop="datePublished">2015-06-28</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/06/28/150628-DtGrid-RequireJS/">DT Grid，RequireJS 混用的坑</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>寥寥几句说完算了。</p>
+<p>项目前端所用技术简介：</p>
+<ul>
+<li>项目是 Web SPA 应用，使用 RequireJS 管理插件，MVVM 框架是 avalon</li>
+<li>index.html 引入了 jquery、bootstrap、dtGrid 等三个 js 文件</li>
+<li>RequireJS 中也配置了 jquery 插件</li>
+</ul>
+<p>出现的症状：</p>
+<ul>
+<li>子模块初始化 dtGrid 时，dtGrid 的 init 方法会出现错误</li>
+<li>用 RequireJS 引入 dtGrid 作为插件后，dtGrid 的 init 方法依然出现错误，但问题变了</li>
+</ul>
+<p>估计问题原因如下：</p>
+<ul>
+<li>jquery 和 dtGrid 在 index.html 中引入了</li>
+<li>dtGrid 是 jquery 插件，使用了 fn 作用域</li>
+<li>jquery 在 RequireJS 中也进行了配置</li>
+<li>dtGrid 初始化时引用了 RequireJS 模块中 jquery 插件的作用域</li>
+</ul>
+<p>解决的办法：</p>
+<ul>
+<li>去掉 RequireJS 中所有的 jquery 引用</li>
+</ul>
+<p>为何如此解决？</p>
+<ul>
+<li>dtGrid 还要引用 bootstrap 等插件，依赖关系后面会越来越复杂</li>
+<li>所有和显示有关的 js/css 都在 index.html 中引入，如果显示控件有问题，只能说明选错了控件库</li>
+<li>所有和业务有关的 js 都用 RequireJS 管理</li>
+<li>做一个折中</li>
+</ul>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/DT-Grid/">DT Grid</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/RequireJS/">RequireJS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Web/">Web</a></li></ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/Web/">Web</a>
+	</div>
+
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
   
     <article id="post-hexo-install" class="article article-type-post" itemscope itemprop="blogPost">
   
@@ -348,12 +436,12 @@
       
       
 	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Blog/">Blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hexo/">Hexo</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hexo/">Hexo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Web/">Web</a></li></ul>
 	</div>
 
       
 	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/Blog/">Blog</a>
+	<a class="article-category-link" href="/categories/Web/">Web</a>
 	</div>
 
 
